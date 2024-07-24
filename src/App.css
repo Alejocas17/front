@@ -1,38 +1,136 @@
+/* src/App.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  max-height: fit-content;
+}
+
 .App {
+  max-width: fit-content;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editor-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+  max-height: fit-content;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.editor-controls {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.editor-controls input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.editor-controls button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.editor-controls button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editor-controls button:active {
+  transform: scale(0.98);
+}
+
+.books-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+  gap: 20px;
+}
+
+.books-list {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.books-list h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.books-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.books-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.books-list strong {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.book-content {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+.book-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.html-preview {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+}
+
+.html-preview code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
